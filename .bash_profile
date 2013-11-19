@@ -18,3 +18,13 @@ alias ll='ls -hl'
 
 # Launch Sublime Text 2 in my Pelican posts directory
 alias blog='subl /Applications/MAMP/htdocs/alexpgates.github.com/source/posts'
+
+# Turn off all your Hue lights
+alias off='hue lights off'
+
+#Quick calculation from command line
+calc(){ awk "BEGIN{ print $* }" ;}
+
+# MacPorts Installer addition on 2013-03-14_at_10:37:15: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
