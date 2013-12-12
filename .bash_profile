@@ -6,8 +6,13 @@ source /usr/local/bin/virtualenvwrapper.sh
 # Add bashmarks - http://www.huyng.com/projects/bashmarks/index.html
 source ~/.local/bin/bashmarks.sh
 
+# Git branch in prompt.
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 # Change the default prompt
-export PS1="[✭ \w] "
+export PS1="[✭ \w] \[\033[32m\]\$(parse_git_branch)\[\033[00m\] "
 
 # Adds some colors in ls and ll
 export CLICOLOR=1
